@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint -c .eslintrc src api --ext js,jsx"
+    "lint": "eslint -c .eslintrc src api --ext js,jsx",
+    "build": "node node_modules/webpack/bin/webpack"
   },
   "dependencies": {
     "axios": "^0.17.0",
