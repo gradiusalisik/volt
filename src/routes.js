@@ -8,6 +8,7 @@ import MainLayout from './layouts/MainLayout'
 
 // Containers
 import InvoicesContainer from './containers/InvoicesContainer'
+import InvoicesFormPageContainer from './containers/InvoicesFormPageContainer'
 import ProductsContainer from './containers/ProductsContainer'
 import CustomersContainer from './containers/CustomersContainer'
 
@@ -18,6 +19,7 @@ export default (
     <div>
       <MainLayout>
         <Route exact path='/' component={InvoicesContainer} />
+        <Route exact path='/invoices/:id/:mode' component={InvoicesFormPageContainer} />
         <Route exact path='/products' component={ProductsContainer} />
         <Route exact path='/customers' component={CustomersContainer} />
       </MainLayout>

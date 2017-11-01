@@ -1,17 +1,29 @@
 import { connect } from 'react-redux'
-// import { onClickCard } from '../../store/Invoices'
+import { fetchInvoices, createProduct, deleteProduct, editProduct } from '../../store/invoices'
+import { onShowModal, changeModalValues } from '../../store/modal'
 
 import Invoices from '../../components/Invoices'
 
 const mapActionCreators = {
-  // onClickCard
+  fetchInvoices,
+  onShowModal,
+  changeModalValues,
+  createProduct,
+  editProduct,
+  deleteProduct
 }
 
 const mapStateToProps =
   ({
-    todos
+    invoices: { items, itemsById, selectedItem },
+    modal: { modalType, invoiceId, invoice }
   }) => ({
-    todos
+    items,
+    itemsById,
+    selectedItem,
+    modalType,
+    invoiceId,
+    invoice
   })
 
 export default connect(mapStateToProps, mapActionCreators)(Invoices)

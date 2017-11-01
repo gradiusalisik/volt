@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { PropTypes as pt } from 'prop-types'
-// import R from 'ramda'
 import memoizee from 'memoizee'
 import { PageHeader, Button } from 'react-bootstrap'
 import ProductForm from 'containers/ProductFormContainer'
